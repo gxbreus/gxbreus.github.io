@@ -5,11 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gabriel Soares — Desenvolvedor Full-Stack &amp; UX/UI Designer</title>
 <meta name="description" content="Gabriel Soares — Desenvolvedor full-stack e UX/UI Designer, estudante de Sistemas de Informação. Front-end, back-end e design de produto para sistemas reais.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%231f3159%22/><text x=%2250%22 y=%2266%22 font-size=%2258%22 font-family=%22Georgia,serif%22 fill=%22%23e8e1cd%22 text-anchor=%22middle%22>G</text></svg>">
+<link rel="icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css">
+<script>
+  (function(){
+    try{
+      var saved = localStorage.getItem("theme");
+      if (saved === "light" || saved === "dark"){
+        document.documentElement.setAttribute("data-theme", saved);
+      }
+    }catch(e){}
+  })();
+</script>
 </head>
 <body>
 
@@ -23,7 +33,13 @@
     <a href="#projetos">Projetos</a>
     <a href="#contato">Contato</a>
   </nav>
-  <a class="btn btn-ghost btn-sm" href="curriculo-gabriel-soares.pdf" target="_blank" rel="noopener">Currículo ↓</a>
+  <div class="header-actions">
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro/escuro">
+      <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+      <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></svg>
+    </button>
+    <a class="btn btn-ghost btn-sm" href="curriculo-gabriel-soares.pdf" target="_blank" rel="noopener">Currículo ↓</a>
+  </div>
 </header>
 
 <main id="top">
@@ -33,12 +49,12 @@
       <p class="kicker">Desenvolvedor Full‑Stack · UX/UI Designer</p>
       <h1 class="hero-title">
         Escrevo o código e desenho
-        <span class="hero-emphasis">a interface de sistemas<br>que resolvem problemas reais</span>.
+        <span class="hero-emphasis">a interface do SIDAGRO</span>.
       </h1>
       <p class="hero-lead">
-        Sou o Gabriel — estudante de Sistemas de Informação na UFLA. Desenvolvo o front-end e o back-end do
-        <strong>Só+1</strong>, um SaaS em produção, e o front-end do <strong>SIDAGRO</strong>, sistema
-        governamental do IMA — onde também atuo como UX/UI Designer.
+        Sou o Gabriel — estudante de Sistemas de Informação na UFLA. No <strong>SIDAGRO</strong>, sistema
+        governamental de defesa agropecuária do IMA, sou front-end e UX/UI Designer. Também desenvolvo o
+        <strong>Só+1</strong>, um SaaS em produção, no front-end e no back-end.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#projetos">Ver projetos</a>
@@ -61,18 +77,14 @@
     </div>
     <div class="about-grid">
       <p class="about-text">
-        Trabalho na fronteira entre implementação e design. No <strong>Só+1</strong>, um SaaS real de organização
-        de futebol amador, contribuo dos dois lados do produto: na API (Express 5, Prisma, PostgreSQL, Stripe)
-        e no front-end (React 19, Vite, SSE). No <strong>SIDAGRO</strong>, sistema governamental do Instituto
-        Mineiro de Agropecuária, desenvolvo o front-end — e também atuo como UX/UI Designer no mesmo projeto,
-        desenhando as telas que depois implemento.
+        No <strong>SIDAGRO</strong>, sistema governamental do Instituto Mineiro de Agropecuária, desenho a
+        interface no Figma e a implemento em React — atuando como UX/UI Designer e desenvolvedor front-end no
+        mesmo projeto. No <strong>Só+1</strong>, SaaS de organização de futebol amador em produção, contribuo
+        na API (Express, Prisma, PostgreSQL) e no front-end (React, Vite).
       </p>
       <p class="about-text">
-        Essa dupla atuação não é acidental: entender a interface me faz escrever código mais alinhado ao que o
-        usuário precisa, e entender o código me faz desenhar interfaces que são possíveis de construir. Já
-        liderei o design de sistemas para a UFLA (NEMASA) e coordenei, de ponta a ponta, o redesign de uma
-        plataforma EdTech. Uso IA generativa como parte real do processo — para ideação, prototipação e para
-        acelerar o caminho entre uma ideia e código em produção.
+        Já liderei o design de sistemas para a UFLA (NEMASA) e coordenei o redesign de uma plataforma EdTech.
+        Uso IA generativa no meu processo de desenvolvimento e design.
       </p>
       <div class="about-stack">
         <h3>Ferramentas do dia a dia</h3>
@@ -80,7 +92,7 @@
           <li><span>Front‑end</span><em>React · TypeScript · Vite · MUI</em></li>
           <li><span>Back‑end</span><em>Node.js · Express · Prisma · PostgreSQL</em></li>
           <li><span>Design</span><em>Figma · Design Systems · WCAG</em></li>
-          <li><span>Processo</span><em>Git · Scrum · Testes automatizados · IA generativa</em></li>
+          <li><span>Processo</span><em>Git · Scrum · IA generativa</em></li>
         </ul>
       </div>
     </div>
@@ -97,8 +109,8 @@
         <div class="timeline-body">
           <h3>UI/UX Designer (Bolsista)</h3>
           <p class="timeline-org">FUNDECC / Laboratório GEDAI</p>
-          <p>Design de interface do SIDAGRO (IMA) no Figma — telas, protótipos e fluxos integrados — em
-             colaboração direta com a equipe de desenvolvimento, onde também desenvolvo o front-end.</p>
+          <p>Design e desenvolvimento front-end do SIDAGRO (IMA) — do Figma ao React, em colaboração direta
+             com a equipe.</p>
         </div>
       </li>
       <li class="timeline-item">
@@ -106,8 +118,8 @@
         <div class="timeline-body">
           <h3>Designer &amp; Gerente de Marketing</h3>
           <p class="timeline-org">Emakers Júnior</p>
-          <p>Marketing, gestão de pessoas e design das entregas da empresa júnior. Liderei o design de uma
-             plataforma de e‑commerce para cliente real, com orçamento e prazos reais.</p>
+          <p>Marketing, gestão de pessoas e design das entregas. Liderei o design de uma plataforma de
+             e‑commerce para cliente real.</p>
         </div>
       </li>
     </ol>
@@ -125,41 +137,50 @@
       <button class="filter-btn" data-filter="ux" role="tab" aria-selected="false">UX/UI</button>
     </div>
 
+    <article class="card-hero" data-track="dev">
+      <div class="card-hero-top">
+        <span class="pill pill-dev">Projeto principal</span>
+      </div>
+      <h3>SIDAGRO</h3>
+      <p>Sistema governamental de defesa agropecuária do Instituto Mineiro de Agropecuária (IMA). Atuo nos
+         dois lados: desenvolvo o front-end e desenho a interface como UX/UI Designer.</p>
+      <div class="card-hero-split">
+        <div>
+          <span class="split-label">Front‑end</span>
+          <p>Componentes reutilizáveis e consumo de APIs REST nos módulos de vacinação, arrecadação,
+             produtos e propriedades.</p>
+          <div class="card-tags"><span>React</span><span>TypeScript</span><span>MUI</span><span>Vite</span></div>
+        </div>
+        <div>
+          <span class="split-label">UX/UI</span>
+          <p>Prototipação, identidade visual e estruturação de fluxo de navegação no Figma.</p>
+          <div class="card-tags"><span>Figma</span><span>Design System</span><span>Prototipagem</span></div>
+        </div>
+      </div>
+    </article>
+
     <div class="projects-grid">
 
-      <article class="card card-featured" data-track="dev">
+      <article class="card" data-track="dev">
         <div class="card-top">
           <span class="pill pill-dev">DEV · Back‑end · Em produção</span>
           <a class="card-link" href="https://api.so-mais-um.com/docs" target="_blank" rel="noopener">api.so-mais-um.com/docs ↗</a>
         </div>
         <h3>Só+1 — API</h3>
-        <p>API REST em produção, com 24 módulos de domínio documentados em OpenAPI/Swagger e cobertura extensa
-           de testes automatizados contra PostgreSQL a cada deploy. Desenvolvi controle de estoque e
-           equipamentos, planos de assinatura via Stripe, exportação e anonimização de dados (LGPD) e
-           correções no fluxo de autenticação.</p>
-        <div class="card-tags"><span>Node.js</span><span>Express 5</span><span>Prisma</span><span>PostgreSQL</span><span>Stripe</span></div>
+        <p>API REST em produção: controle de estoque, planos de assinatura via Stripe e exportação/anonimização
+           de dados (LGPD).</p>
+        <div class="card-tags"><span>Node.js</span><span>Express 5</span><span>Prisma</span><span>PostgreSQL</span></div>
       </article>
 
-      <article class="card card-featured" data-track="dev">
+      <article class="card" data-track="dev">
         <div class="card-top">
           <span class="pill pill-dev">DEV · Front‑end · Em produção</span>
           <a class="card-link" href="https://app.so-mais-um.com" target="_blank" rel="noopener">app.so-mais-um.com ↗</a>
         </div>
         <h3>Só+1 — Web App</h3>
-        <p>Front-end do mesmo produto: 3 perfis de acesso e 12 modalidades — do cadastro da pelada ao sorteio
-           de times. Implementei as áreas de Jogador e os dashboards de Admin/Owner, com deploy contínuo na
-           Vercel e notificações em tempo real via SSE.</p>
+        <p>Front-end do mesmo produto: áreas de Jogador e dashboards de Admin/Owner, com notificações em
+           tempo real via SSE.</p>
         <div class="card-tags"><span>React 19</span><span>TypeScript</span><span>Vite</span><span>SSE</span></div>
-      </article>
-
-      <article class="card" data-track="dev">
-        <div class="card-top">
-          <span class="pill pill-dev">DEV · Front‑end</span>
-        </div>
-        <h3>SIDAGRO — Front‑end</h3>
-        <p>Desenvolvo e mantenho o front-end: interfaces responsivas, componentes reutilizáveis e consumo
-           de APIs REST — módulos de vacinação, arrecadação, produtos e mais.</p>
-        <div class="card-tags"><span>React</span><span>TypeScript</span><span>MUI</span><span>Vite</span></div>
       </article>
 
       <article class="card" data-track="dev">
@@ -167,9 +188,9 @@
           <span class="pill pill-dev">DEV · Full‑stack</span>
           <a class="card-link" href="https://github.com/gxbreus/fazenda-valenza" target="_blank" rel="noopener">repositório ↗</a>
         </div>
-        <h3>Fazenda Valenza — Sistema de gestão agrícola</h3>
-        <p>Aplicação full-stack própria para gestão de talhões e rastreabilidade de lotes de café, com
-           dashboard gerencial e consulta pública de rastreabilidade por QR Code.</p>
+        <h3>Fazenda Valenza</h3>
+        <p>Sistema próprio de gestão de talhões e rastreabilidade de lotes de café, com consulta pública
+           por QR Code.</p>
         <div class="card-tags"><span>Python</span><span>Streamlit</span><span>PostgreSQL</span></div>
       </article>
 
@@ -178,20 +199,9 @@
           <span class="pill pill-dev">DEV · Full‑stack</span>
           <a class="card-link" href="https://github.com/gxbreus/campus-task-sync" target="_blank" rel="noopener">repositório ↗</a>
         </div>
-        <h3>Campus Task Sync — Automação acadêmica</h3>
-        <p>Projeto próprio: sincroniza pendências do calendário acadêmico com um painel no Notion, integrando
-           Moodle e Google Drive, com execução agendada via GitHub Actions.</p>
+        <h3>Campus Task Sync</h3>
+        <p>Sincroniza pendências do calendário acadêmico com o Notion, integrando Moodle e Google Drive.</p>
         <div class="card-tags"><span>TypeScript</span><span>Next.js</span><span>Supabase</span></div>
-      </article>
-
-      <article class="card" data-track="ux">
-        <div class="card-top">
-          <span class="pill pill-ux">UX/UI</span>
-        </div>
-        <h3>SIDAGRO — Redesign do Sistema de Defesa Agropecuária</h3>
-        <p>Parceria IMA + Fundecc para redesenhar um sistema governamental de georreferenciamento e gestão
-           da defesa agropecuária: prototipação, identidade visual e estruturação de fluxo de navegação.</p>
-        <div class="card-tags"><span>Figma</span><span>Design System</span><span>Prototipagem</span></div>
       </article>
 
       <article class="card" data-track="ux">
@@ -199,8 +209,8 @@
           <span class="pill pill-ux">UX/UI · Liderança</span>
         </div>
         <h3>Redesign da Plataforma de Redação Inteligente</h3>
-        <p>UX/UI Designer e Coordenador de Design — liderei o processo de criação junto à equipe,
-           redesenhando fluxos de uma EdTech de correção de redações, com handoff completo para dev.</p>
+        <p>UX/UI Designer e Coordenador de Design — redesenho de fluxos de uma EdTech de correção de
+           redações, com handoff completo para dev.</p>
         <div class="card-tags"><span>Figma</span><span>EdTech</span><span>Coordenação</span></div>
       </article>
 
@@ -208,9 +218,9 @@
         <div class="card-top">
           <span class="pill pill-ux">UX/UI</span>
         </div>
-        <h3>NEMASA — Gestão de bebedouros da UFLA</h3>
-        <p>Design de interface e experiência de um sistema de monitoramento da qualidade da água, traduzindo
-           requisitos científicos complexos em uma solução intuitiva.</p>
+        <h3>NEMASA</h3>
+        <p>Design de um sistema de monitoramento da qualidade da água na UFLA, traduzindo requisitos
+           científicos em uma solução intuitiva.</p>
         <div class="card-tags"><span>Figma</span><span>Pesquisa de usuário</span></div>
       </article>
 
@@ -223,8 +233,7 @@
       <h2>Contato</h2>
     </div>
     <div class="contact-card">
-      <p>Aberto a oportunidades de estágio em Engenharia de Software e Produto &amp; Design. Se o que você viu
-         aqui fizer sentido pra sua equipe, bora conversar.</p>
+      <p>Aberto a estágio em Engenharia de Software e Produto &amp; Design.</p>
       <div class="contact-links">
         <a class="btn btn-primary" href="mailto:scs.gabriel1@gmail.com">scs.gabriel1@gmail.com</a>
         <a class="btn btn-ghost" href="https://linkedin.com/in/gabreus" target="_blank" rel="noopener">LinkedIn</a>
