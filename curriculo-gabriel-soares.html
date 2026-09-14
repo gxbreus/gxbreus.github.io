@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Currículo - Gabriel Soares</title>
+<style>
+@page { size: A4; margin: 13mm 14mm; }
+* { box-sizing: border-box; font-variant-ligatures: none; }
+body { margin: 0; color: #202820; font: 9pt/1.3 Arial, sans-serif; }
+h1 { font-size: 24pt; margin: 0 0 2mm; }
+h2 { font-size: 10pt; letter-spacing: 1px; text-transform: uppercase; color: #394b3e; border-bottom: 1px solid #ccd4ca; padding-bottom: 1mm; margin: 3mm 0 1.5mm; }
+h3 { font-size: 10pt; margin: 1mm 0; }
+p { margin: 1mm 0; }
+a { color: inherit; text-decoration: none; }
+header { border-bottom: 2px solid #394b3e; padding-bottom: 3mm; }
+.role { font-weight: bold; font-size: 11pt; color: #394b3e; }
+.contact { font-size: 9pt; margin-top: 2mm; }
+.row { display: flex; justify-content: space-between; gap: 4mm; align-items: baseline; }
+.date, .link { font-size: 8.5pt; color: #4c5a50; white-space: nowrap; }
+ul { padding-left: 4mm; margin: 1mm 0 2mm; }
+li { margin: .6mm 0; }
+.project, .experience { break-inside: avoid; border-bottom: 1px solid #e2e6e0; padding: 1.5mm 0; }
+.label { display: inline-block; font-size: 8pt; letter-spacing: .5px; background: #e6ebe4; color: #394b3e; padding: .5mm 1.5mm; }
+.tags { font-size: 8pt; color: #394b3e; margin-top: 1.5mm; }
+.tags span { display: inline-block; background: #edf0e9; padding: .5mm 1.5mm; margin: 0 1mm 1mm 0; }
+.page-two { break-before: page; }
+.columns { display: grid; grid-template-columns: 1fr 1.2fr .7fr; gap: 6mm; margin-top: 5mm; }
+.columns h2 { margin-top: 0; text-transform: none; letter-spacing: 0; font-size: 12pt; }
+.columns h3 { margin-top: 4mm; }
+</style>
+</head>
+<body>
+<header>
+<h1>Gabriel Soares</h1>
+<p class="role">Desenvolvedor Full-Stack · UX/UI Designer · Estudante de Sistemas de Informação</p>
+<p class="contact">Lavras, MG - Brasil · <a href="mailto:scs.gabriel1@gmail.com">scs.gabriel1@gmail.com</a> · +55 (31) 98890-7226<br><a href="https://github.com/gxbreus">github.com/gxbreus</a> · <a href="https://linkedin.com/in/gabreus">linkedin.com/in/gabreus</a></p>
+</header>
+<h2>Resumo</h2>
+<p>Desenvolvedor Full-Stack e UX/UI Designer, estudante de Sistemas de Informação (UFLA). Atuo no SIDAGRO, sistema governamental de defesa agropecuária do IMA, como desenvolvedor front-end e UX/UI Designer: desenho as telas no Figma e também as implemento em React. Também desenvolvo o Só+1, SaaS de organização de futebol amador em produção, na API (Node.js, Express, Prisma, PostgreSQL) e no front-end (React, TypeScript). Criei uma integração da Alexa com a OpenAI em Python e AWS Lambda. Uso IA generativa no processo de desenvolvimento e design.</p>
+<h2>Experiência profissional</h2>
+<div class="experience">
+<div class="row"><h3>UI/UX Designer (Bolsista)</h3><span class="date">jul/2025 - atual</span></div>
+<p>FUNDECC / Laboratório GEDAI</p>
+<ul><li>Desenho e desenvolvo a interface do SIDAGRO no Figma e em React: telas de cadastro, prototipação e integração de fluxos, em colaboração direta com a equipe.</li><li>Avalio interfaces sob princípios de acessibilidade WCAG e assino a identidade visual de materiais do laboratório.</li></ul>
+</div>
+<div class="experience">
+<div class="row"><h3>Designer &amp; Gerente de Marketing</h3><span class="date">jan/2025 - abr/2026</span></div>
+<p>Emakers Júnior</p>
+<ul><li>Marketing, documentação e gestão de pessoas da empresa júnior, além do design das entregas.</li><li>Liderei o design de uma plataforma de e-commerce para cliente real: meu primeiro projeto fora do ambiente acadêmico.</li></ul>
+</div>
+<h2>Projetos selecionados</h2>
+<article class="project">
+<span class="label">DEV · IA E SERVERLESS</span>
+<h3>Alexa AI Bridge</h3>
+<p class="link"><a href="https://github.com/gxbreus/alexa-ai-bridge">github.com/gxbreus/alexa-ai-bridge</a></p>
+<ul><li>Desenvolvi uma integração da Alexa com a OpenAI em Python, executada na AWS Lambda, com busca web antes das respostas e contexto de conversa durante a sessão.</li><li>Implementei tratamento de erros, limites de tempo e testes automatizados, usando Alexa Skills Kit e Responses API.</li></ul>
+<div class="tags"><span>Python</span><span>AWS Lambda</span><span>OpenAI API</span><span>Alexa Skills Kit</span><span>Pytest</span></div>
+</article>
+<article class="project">
+<span class="label">DEV · FRONT-END</span><h3>SIDAGRO - Front-end</h3>
+<ul><li>Desenvolvo e mantenho o front-end do SIDAGRO, sistema governamental de defesa agropecuária do IMA: componentes reutilizáveis e consumo de APIs REST nos módulos de vacinação, arrecadação, produtos e propriedades.</li></ul>
+<div class="tags"><span>React</span><span>TypeScript</span><span>MUI</span><span>Vite</span></div>
+</article>
+<article class="project">
+<span class="label">DEV · FULL-STACK</span><div class="row"><h3>Só+1</h3><a class="link" href="https://app.so-mais-um.com">app.so-mais-um.com</a></div>
+<ul><li>SaaS de organização de futebol amador em produção. Atuo na API (controle de estoque, planos de assinatura via Stripe, exportação e anonimização de dados/LGPD) e no front-end (áreas de Jogador e dashboards de Admin/Owner, com notificações em tempo real via SSE).</li></ul>
+<div class="tags"><span>React 19</span><span>TypeScript</span><span>Node.js</span><span>Express 5</span><span>Prisma</span><span>PostgreSQL</span></div>
+</article>
+<section class="page-two">
+<h2>Projetos selecionados - continuação</h2>
+<article class="project">
+<span class="label">UX/UI</span><h3>SIDAGRO - Redesign da Interface</h3>
+<ul><li>Desenho as telas do mesmo sistema no Figma: prototipação, identidade visual e estruturação de fluxo de navegação, em parceria com o IMA.</li></ul>
+<div class="tags"><span>Figma</span><span>Design System</span><span>Prototipagem</span></div>
+</article>
+<article class="project">
+<span class="label">DEV · FULL-STACK</span><h3>Fazenda Valenza - Sistema de gestão agrícola</h3>
+<a class="link" href="https://github.com/gxbreus/fazenda-valenza">github.com/gxbreus/fazenda-valenza</a>
+<ul><li>Aplicação própria para gestão de talhões e rastreabilidade de lotes de café, com dashboard gerencial e consulta pública por QR Code.</li></ul>
+<div class="tags"><span>Python</span><span>Streamlit</span><span>PostgreSQL</span></div>
+</article>
+<article class="project">
+<span class="label">DEV · FULL-STACK</span><h3>Campus Task Sync - Automação de tarefas acadêmicas</h3>
+<a class="link" href="https://github.com/gxbreus/campus-task-sync">github.com/gxbreus/campus-task-sync</a>
+<ul><li>Sincroniza pendências do calendário acadêmico com o Notion, integrando Moodle e Google Drive.</li></ul>
+<div class="tags"><span>TypeScript</span><span>Next.js</span><span>Supabase</span></div>
+</article>
+<article class="project">
+<span class="label">UX/UI · LIDERANÇA</span><h3>Redesign da Plataforma de Redação Inteligente</h3>
+<ul><li>UX/UI Designer e Coordenador de Design: liderei o redesenho de fluxos de uma EdTech de correção de redações, com handoff completo para desenvolvimento.</li></ul>
+<div class="tags"><span>Figma</span><span>EdTech</span><span>Coordenação</span></div>
+</article>
+<article class="project">
+<span class="label">UX/UI</span><h3>NEMASA - Gestão de bebedouros da UFLA</h3>
+<ul><li>Design de um sistema de monitoramento da qualidade da água no Laboratório GEDAI, traduzindo requisitos científicos em uma solução intuitiva.</li></ul>
+<div class="tags"><span>Figma</span><span>Pesquisa de usuário</span></div>
+</article>
+<div class="columns">
+<div><h2>Educação</h2><p><strong>Bacharelado em Sistemas de Informação</strong><br>UFLA · 2024 - em andamento<br>Previsão de conclusão: 2028</p><h3>Cursos</h3><ul><li>Figma - UX/UI (Udemy)</li><li>Web Development Bootcamp (Udemy)</li><li>Acessibilidade Digital (Todos na Web)</li><li>Prompting Responsável (Santander Open Academy)</li></ul></div>
+<div><h2>Habilidades</h2><p>TypeScript · React · Node.js · Express · Prisma · PostgreSQL</p><p>Python · AWS Lambda · OpenAI API · Alexa Skills Kit</p><p>Git · Testes automatizados · Scrum</p><p>Figma · Design System · Prototipagem · WCAG · IA generativa</p></div>
+<div><h2>Idiomas</h2><p>Português - Nativo</p><p>Inglês - Avançado</p><p>Italiano - Básico</p></div>
+</div>
+</section>
+</body>
+</html>
