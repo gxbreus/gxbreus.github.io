@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Resume - Gabriel Soares</title>
+<style>
+@page { size: A4; margin: 13mm 14mm; }
+* { box-sizing: border-box; font-variant-ligatures: none; }
+body { margin: 0; color: #202820; font: 9pt/1.3 Arial, sans-serif; }
+h1 { font-size: 24pt; margin: 0 0 2mm; }
+h2 { font-size: 10pt; letter-spacing: 1px; text-transform: uppercase; color: #394b3e; border-bottom: 1px solid #ccd4ca; padding-bottom: 1mm; margin: 3mm 0 1.5mm; }
+h3 { font-size: 10pt; margin: 1mm 0; }
+p { margin: 1mm 0; }
+a { color: inherit; text-decoration: none; }
+header { border-bottom: 2px solid #394b3e; padding-bottom: 3mm; }
+.role { font-weight: bold; font-size: 11pt; color: #394b3e; }
+.contact { font-size: 9pt; margin-top: 2mm; }
+.row { display: flex; justify-content: space-between; gap: 4mm; align-items: baseline; }
+.date, .link { font-size: 8.5pt; color: #4c5a50; white-space: nowrap; }
+ul { padding-left: 4mm; margin: 1mm 0 2mm; }
+li { margin: .6mm 0; }
+.project, .experience { break-inside: avoid; border-bottom: 1px solid #e2e6e0; padding: 1.5mm 0; }
+.label { display: inline-block; font-size: 8pt; letter-spacing: .5px; background: #e6ebe4; color: #394b3e; padding: .5mm 1.5mm; }
+.tags { font-size: 8pt; color: #394b3e; margin-top: 1.5mm; }
+.tags span { display: inline-block; background: #edf0e9; padding: .5mm 1.5mm; margin: 0 1mm 1mm 0; }
+.page-two { break-before: page; }
+.columns { display: grid; grid-template-columns: 1fr 1.2fr .7fr; gap: 6mm; margin-top: 5mm; }
+.columns h2 { margin-top: 0; text-transform: none; letter-spacing: 0; font-size: 12pt; }
+.columns h3 { margin-top: 4mm; }
+</style>
+</head>
+<body>
+<header>
+<h1>Gabriel Soares</h1>
+<p class="role">Full-Stack Developer · UX/UI Designer · Information Systems Student</p>
+<p class="contact">Lavras, MG - Brazil · <a href="mailto:scs.gabriel1@gmail.com">scs.gabriel1@gmail.com</a> · +55 (31) 98890-7226<br><a href="https://github.com/gxbreus">github.com/gxbreus</a> · <a href="https://linkedin.com/in/gabreus">linkedin.com/in/gabreus</a></p>
+</header>
+<h2>Professional Summary</h2>
+<p>Full-Stack Developer and UX/UI Designer pursuing a bachelor's degree in Information Systems at UFLA. At SIDAGRO, a government animal and plant health system for IMA, I work as a front-end developer and UX/UI Designer, designing interfaces in Figma and implementing them in React. I also develop Só+1, a live amateur football management SaaS, contributing to its API (Node.js, Express, Prisma, PostgreSQL) and front-end (React, TypeScript). I created an Alexa integration with OpenAI using Python and AWS Lambda.</p>
+<h2>Professional Experience</h2>
+<div class="experience">
+<div class="row"><h3>UI/UX Designer (Research Fellow)</h3><span class="date">Jul 2025 - Present</span></div>
+<p>FUNDECC / GEDAI Laboratory</p>
+<ul><li>Design and develop SIDAGRO interfaces in Figma and React, including registration screens, prototypes, and integrated workflows, in direct collaboration with the team.</li><li>Evaluate interfaces using WCAG accessibility principles and create visual identities for laboratory materials.</li></ul>
+</div>
+<div class="experience">
+<div class="row"><h3>Designer &amp; Marketing Manager</h3><span class="date">Jan 2025 - Apr 2026</span></div>
+<p>Emakers Júnior</p>
+<ul><li>Worked across marketing, documentation, people management, and design delivery for the junior enterprise.</li><li>Led the design of an e-commerce platform for a real client, my first project outside an academic setting.</li></ul>
+</div>
+<h2>Selected Projects</h2>
+<article class="project">
+<span class="label">DEV · AI &amp; SERVERLESS</span>
+<h3>Alexa AI Bridge</h3>
+<p class="link"><a href="https://github.com/gxbreus/alexa-ai-bridge">github.com/gxbreus/alexa-ai-bridge</a></p>
+<ul><li>Built an Alexa integration with OpenAI in Python, deployed on AWS Lambda, with web search before responses and conversational context throughout the session.</li><li>Implemented error handling, time limits, and automated tests using the Alexa Skills Kit and Responses API.</li></ul>
+<div class="tags"><span>Python</span><span>AWS Lambda</span><span>OpenAI API</span><span>Alexa Skills Kit</span><span>Pytest</span></div>
+</article>
+<article class="project">
+<span class="label">DEV · FRONT-END</span><h3>SIDAGRO - Front-end</h3>
+<ul><li>Develop and maintain the front-end of SIDAGRO, IMA's government animal and plant health system, building reusable components and consuming REST APIs across vaccination, revenue, product, and property modules.</li></ul>
+<div class="tags"><span>React</span><span>TypeScript</span><span>MUI</span><span>Vite</span></div>
+</article>
+<article class="project">
+<span class="label">DEV · FULL-STACK</span><div class="row"><h3>Só+1</h3><a class="link" href="https://app.so-mais-um.com">app.so-mais-um.com</a></div>
+<ul><li>Live SaaS platform for organizing amateur football. Contribute to the API (inventory control, Stripe subscription plans, and data export and anonymization for LGPD compliance) and the front-end (Player areas, Admin/Owner dashboards, and real-time SSE notifications).</li></ul>
+<div class="tags"><span>React 19</span><span>TypeScript</span><span>Node.js</span><span>Express 5</span><span>Prisma</span><span>PostgreSQL</span></div>
+</article>
+<section class="page-two">
+<h2>Selected Projects - Continued</h2>
+<article class="project">
+<span class="label">UX/UI</span><h3>SIDAGRO - Interface Redesign</h3>
+<ul><li>Design the system's interfaces in Figma, covering prototyping, visual identity, and navigation flow structure in partnership with IMA.</li></ul>
+<div class="tags"><span>Figma</span><span>Design System</span><span>Prototyping</span></div>
+</article>
+<article class="project">
+<span class="label">DEV · FULL-STACK</span><h3>Fazenda Valenza - Farm Management System</h3>
+<a class="link" href="https://github.com/gxbreus/fazenda-valenza">github.com/gxbreus/fazenda-valenza</a>
+<ul><li>Built a farm management application for field operations and coffee lot traceability, featuring a management dashboard and public QR Code lookup.</li></ul>
+<div class="tags"><span>Python</span><span>Streamlit</span><span>PostgreSQL</span></div>
+</article>
+<article class="project">
+<span class="label">DEV · FULL-STACK</span><h3>Campus Task Sync - Academic Task Automation</h3>
+<a class="link" href="https://github.com/gxbreus/campus-task-sync">github.com/gxbreus/campus-task-sync</a>
+<ul><li>Synchronizes academic calendar tasks with Notion by integrating Moodle and Google Drive.</li></ul>
+<div class="tags"><span>TypeScript</span><span>Next.js</span><span>Supabase</span></div>
+</article>
+<article class="project">
+<span class="label">UX/UI · LEADERSHIP</span><h3>Essay Writing Platform Redesign</h3>
+<ul><li>Worked as UX/UI Designer and Design Coordinator, leading the redesign of workflows for an EdTech essay-review platform and delivering a complete developer handoff.</li></ul>
+<div class="tags"><span>Figma</span><span>EdTech</span><span>Leadership</span></div>
+</article>
+<article class="project">
+<span class="label">UX/UI</span><h3>NEMASA - UFLA Drinking Fountain Management</h3>
+<ul><li>Designed a water-quality monitoring system at the GEDAI Laboratory, translating scientific requirements into an intuitive solution.</li></ul>
+<div class="tags"><span>Figma</span><span>User Research</span></div>
+</article>
+<div class="columns">
+<div><h2>Education</h2><p><strong>Bachelor's Degree in Information Systems</strong><br>UFLA · 2024 - Present<br>Expected graduation: 2028</p><h3>Courses</h3><ul><li>Figma - UX/UI (Udemy)</li><li>Web Development Bootcamp (Udemy)</li><li>Digital Accessibility (Todos na Web)</li><li>Responsible Prompting (Santander Open Academy)</li></ul></div>
+<div><h2>Skills</h2><p>TypeScript · React · Node.js · Express · Prisma · PostgreSQL</p><p>Python · AWS Lambda · OpenAI API · Alexa Skills Kit</p><p>Git · Automated Testing · Scrum</p><p>Figma · Design Systems · Prototyping · WCAG</p></div>
+<div><h2>Languages</h2><p>Portuguese - Native</p><p>English - Advanced</p><p>Italian - Basic</p></div>
+</div>
+</section>
+</body>
+</html>
