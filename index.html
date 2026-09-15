@@ -3,19 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gabriel Soares — Desenvolvedor Full-Stack &amp; UX/UI Designer</title>
-<meta name="description" content="Gabriel Soares — Desenvolvedor full-stack e UX/UI Designer, estudante de Sistemas de Informação. Front-end, back-end e design de produto para sistemas reais.">
+<title>Gabriel Soares — UX/UI Designer &amp; Desenvolvedor Front-end</title>
+<meta name="description" content="Gabriel Soares — UX/UI Designer e desenvolvedor front-end, estudante de Sistemas de Informação. Design de produto e desenvolvimento de interfaces para sistemas reais.">
+<link rel="canonical" href="https://gxbreus.github.io/">
+<link rel="alternate" hreflang="pt-BR" href="https://gxbreus.github.io/">
+<link rel="alternate" hreflang="en" href="https://gxbreus.github.io/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://gxbreus.github.io/">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Gabriel Soares",
+  "url": "https://gxbreus.github.io/",
+  "sameAs": [
+    "https://github.com/gxbreus",
+    "https://linkedin.com/in/gabreus"
+  ],
+  "jobTitle": ["UX/UI Designer", "Front-end Developer"],
+  "knowsAbout": ["UX/UI Design", "Figma", "Design Systems", "React", "TypeScript", "Node.js", "Web Accessibility"]
+}
+</script>
 <script>
   (function(){
     try{
-      var saved = localStorage.getItem("theme");
-      if (saved === "light" || saved === "dark"){
-        document.documentElement.setAttribute("data-theme", saved);
+      var savedTheme = localStorage.getItem("theme");
+      var queryLanguage = new URLSearchParams(window.location.search).get("lang");
+      var savedLanguage = localStorage.getItem("language");
+      if (savedTheme === "light" || savedTheme === "dark"){
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+      if (queryLanguage === "en" || savedLanguage === "en"){
+        document.documentElement.lang = "en";
+        document.documentElement.setAttribute("data-language", "en");
       }
     }catch(e){}
   })();
@@ -23,237 +47,165 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main" data-i18n="skipLink">Pular para o conteúdo</a>
 <div class="noise" aria-hidden="true"></div>
 
 <header class="site-header">
-  <a class="brand" href="#top"><img src="avatar-nav.png" alt="Gabriel Soares" width="36" height="36"></a>
-  <nav class="nav">
-    <a href="#sobre">Sobre</a>
-    <a href="#experiencia">Experiência</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#contato">Contato</a>
+  <a class="brand" href="#top" aria-label="Gabriel Soares — início" data-i18n-aria="brandLabel"><img src="avatar-nav.png" alt="Gabriel Soares" width="36" height="36"></a>
+  <nav class="nav" aria-label="Navegação principal" data-i18n-aria="navLabel">
+    <a href="#projetos" data-i18n="navProjects">Projetos</a>
+    <a href="#experiencia" data-i18n="navExperience">Experiência</a>
+    <a href="#sobre" data-i18n="navAbout">Sobre</a>
+    <a href="#contato" data-i18n="navContact">Contato</a>
   </nav>
   <div class="header-actions">
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro/escuro">
-      <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
-      <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></svg>
+    <div class="language-switcher" role="group" aria-label="Selecionar idioma" data-i18n-aria="languageLabel">
+      <button class="language-btn is-active" type="button" data-language-option="pt-BR" aria-pressed="true" aria-label="Português do Brasil">PT</button>
+      <button class="language-btn" type="button" data-language-option="en" aria-pressed="false" aria-label="English">EN</button>
+    </div>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro/escuro" data-i18n-aria="themeLabel">
+      <svg class="icon-sun" aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+      <svg class="icon-moon" aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></svg>
     </button>
-    <a class="btn btn-ghost btn-sm" href="curriculo-gabriel-soares.pdf" target="_blank" rel="noopener">Currículo ↓</a>
+    <a class="btn btn-ghost btn-sm resume-link" href="curriculo-gabriel-soares.pdf" target="_blank" rel="noopener" data-i18n="resumeLink">Currículo PDF</a>
   </div>
 </header>
 
-<main id="top">
-
+<main id="main">
+  <div id="top" aria-hidden="true"></div>
   <section class="hero">
     <div class="hero-inner">
-      <p class="kicker">Desenvolvedor Full‑Stack · UX/UI Designer</p>
-      <h1 class="hero-title">
-        Escrevo o código
-        <span class="hero-emphasis">e desenho a interface</span>.
-      </h1>
-      <p class="hero-lead">
-        Sou o Gabriel — estudante de Sistemas de Informação na UFLA. No <strong>SIDAGRO</strong>, sistema
-        governamental de defesa agropecuária do IMA, sou front-end e UX/UI Designer. Também desenvolvo o
-        <strong>Só+1</strong>, um SaaS em produção, no front-end e no back-end.
-      </p>
+      <p class="kicker" data-i18n="heroKicker">UX/UI Designer · Desenvolvedor Front-end</p>
+      <h1 class="hero-title" data-i18n-html="heroTitle">Desenho a experiência<br><span class="hero-emphasis">e construo a interface</span>.</h1>
+      <p class="hero-lead" data-i18n-html="heroLead">Sou o Gabriel — estudante de Sistemas de Informação na UFLA. No <strong>SIDAGRO</strong>, sistema governamental de defesa agropecuária do IMA, desenho e implemento interfaces. Também desenvolvo o <strong>Só+1</strong>, um SaaS em produção, no front-end e no back-end.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#projetos">Ver projetos</a>
-        <a class="btn btn-ghost" href="mailto:scs.gabriel1@gmail.com">Falar comigo</a>
+        <a class="btn btn-primary" href="#projetos" data-i18n="viewProjects">Ver projetos</a>
+        <a class="btn btn-ghost" href="mailto:scs.gabriel1@gmail.com" data-i18n="contactMe">Falar comigo</a>
       </div>
       <div class="hero-meta">
-        <span>Lavras, MG — Brasil</span>
-        <span class="dot">·</span>
-        <a href="https://github.com/gxbreus" target="_blank" rel="noopener">github.com/gxbreus</a>
-        <span class="dot">·</span>
+        <span data-i18n="location">Lavras, MG — Brasil</span><span class="dot">·</span>
+        <a href="https://github.com/gxbreus" target="_blank" rel="noopener">github.com/gxbreus</a><span class="dot">·</span>
         <a href="https://linkedin.com/in/gabreus" target="_blank" rel="noopener">linkedin.com/in/gabreus</a>
       </div>
     </div>
   </section>
 
-  <section id="sobre" class="section reveal">
-    <div class="section-head">
-      <span class="section-num">01</span>
-      <h2>Sobre</h2>
-    </div>
-    <div class="about-grid">
-      <p class="about-text">
-        No <strong>SIDAGRO</strong>, sistema governamental do Instituto Mineiro de Agropecuária, desenho a
-        interface no Figma e a implemento em React — atuando como UX/UI Designer e desenvolvedor front-end no
-        mesmo projeto. No <strong>Só+1</strong>, SaaS de organização de futebol amador em produção, contribuo
-        na API (Express, Prisma, PostgreSQL) e no front-end (React, Vite).
-      </p>
-      <p class="about-text">
-        Já liderei o design de sistemas para a UFLA (NEMASA) e coordenei o redesign de uma plataforma EdTech.
-        Também criei o
-        <strong>Alexa AI Bridge</strong>, conectando a Alexa à OpenAI com Python e AWS Lambda,
-        com busca web e contexto de conversa durante a sessão.
-      </p>
-      <div class="about-stack">
-        <h3>Ferramentas do dia a dia</h3>
-        <ul class="stack-list">
-          <li><span>Front‑end</span><em>React · TypeScript · Vite · MUI</em></li>
-          <li><span>Back‑end</span><em>Node.js · Express · Prisma · PostgreSQL</em></li>
-          <li><span>IA e cloud</span><em>Python · OpenAI API · AWS Lambda</em></li>
-          <li><span>Design</span><em>Figma · Design Systems · WCAG</em></li>
-          <li><span>Processo</span><em>Git · Scrum · Testes automatizados</em></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="experiencia" class="section reveal">
-    <div class="section-head">
-      <span class="section-num">02</span>
-      <h2>Experiência</h2>
-    </div>
-    <ol class="timeline">
-      <li class="timeline-item">
-        <div class="timeline-date">jul/2025 — atual</div>
-        <div class="timeline-body">
-          <h3>UI/UX Designer (Bolsista)</h3>
-          <p class="timeline-org">FUNDECC / Laboratório GEDAI</p>
-          <p>Design e desenvolvimento front-end do SIDAGRO (IMA) — do Figma ao React, em colaboração direta
-             com a equipe.</p>
-        </div>
-      </li>
-      <li class="timeline-item">
-        <div class="timeline-date">jan/2025 — abr/2026</div>
-        <div class="timeline-body">
-          <h3>Designer &amp; Gerente de Marketing</h3>
-          <p class="timeline-org">Emakers Júnior</p>
-          <p>Marketing, gestão de pessoas e design das entregas. Liderei o design de uma plataforma de
-             e‑commerce para cliente real.</p>
-        </div>
-      </li>
-    </ol>
-  </section>
-
   <section id="projetos" class="section reveal">
-    <div class="section-head">
-      <span class="section-num">03</span>
-      <h2>Projetos selecionados</h2>
+    <div class="section-head"><span class="section-num">01</span><h2 data-i18n="projectsTitle">Projetos selecionados</h2></div>
+    <div class="filter-row" role="group" aria-label="Filtrar projetos" data-i18n-aria="filterLabel">
+      <button class="filter-btn is-active" data-filter="all" type="button" aria-pressed="true" data-i18n="filterAll">Todos</button>
+      <button class="filter-btn" data-filter="dev" type="button" aria-pressed="false">Dev</button>
+      <button class="filter-btn" data-filter="ux" type="button" aria-pressed="false">UX/UI</button>
     </div>
 
-    <div class="filter-row" role="tablist" aria-label="Filtrar projetos">
-      <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">Todos</button>
-      <button class="filter-btn" data-filter="dev" role="tab" aria-selected="false">Dev</button>
-      <button class="filter-btn" data-filter="ux" role="tab" aria-selected="false">UX/UI</button>
-    </div>
-
-    <article class="card-hero" data-track="dev">
-      <div class="card-hero-top">
-        <span class="pill pill-dev">Projeto principal</span>
-      </div>
+    <article class="card-hero" data-track="dev ux">
+      <div class="card-hero-top"><span class="pill pill-dev" data-i18n="mainProject">Projeto principal</span></div>
       <h3>SIDAGRO</h3>
-      <p>Sistema governamental de defesa agropecuária do Instituto Mineiro de Agropecuária (IMA). Atuo nos
-         dois lados: desenvolvo o front-end e desenho a interface como UX/UI Designer.</p>
+      <p data-i18n="sidagroIntro">Sistema governamental de defesa agropecuária do Instituto Mineiro de Agropecuária (IMA). Atuo nos dois lados: desenvolvo o front-end e desenho a interface como UX/UI Designer.</p>
       <div class="card-hero-split">
         <div>
-          <span class="split-label">Front‑end</span>
-          <p>Componentes reutilizáveis e consumo de APIs REST nos módulos de vacinação, arrecadação,
-             produtos e propriedades.</p>
+          <span class="split-label">Front-end</span>
+          <p data-i18n="sidagroDev">Componentes reutilizáveis e consumo de APIs REST nos módulos de vacinação, arrecadação, produtos e propriedades.</p>
           <div class="card-tags"><span>React</span><span>TypeScript</span><span>MUI</span><span>Vite</span></div>
         </div>
         <div>
           <span class="split-label">UX/UI</span>
-          <p>Prototipação, identidade visual e estruturação de fluxo de navegação no Figma.</p>
-          <div class="card-tags"><span>Figma</span><span>Design System</span><span>Prototipagem</span></div>
+          <p data-i18n="sidagroUx">Prototipação, identidade visual e estruturação de fluxo de navegação no Figma.</p>
+          <div class="card-tags"><span>Figma</span><span>Design System</span><span data-i18n="prototyping">Prototipagem</span></div>
         </div>
       </div>
     </article>
 
     <div class="projects-grid">
-
       <article class="card" data-track="dev">
-        <div class="card-top">
-          <span class="pill pill-dev">DEV · IA e Serverless</span>
-          <a class="card-link" href="https://github.com/gxbreus/alexa-ai-bridge" target="_blank" rel="noopener">repositório ↗</a>
-        </div>
+        <div class="card-top"><span class="pill pill-dev" data-i18n="alexaPill">DEV · IA e Serverless</span><a class="card-link" href="https://github.com/gxbreus/alexa-ai-bridge" target="_blank" rel="noopener" data-i18n="repositoryLink">repositório ↗</a></div>
         <h3>Alexa AI Bridge</h3>
-        <p>Desenvolvi uma integração da Alexa com a OpenAI em Python, executada na AWS Lambda.
-           O assistente consulta a web antes de responder e mantém o contexto durante a sessão,
-           usando recursos oficiais sem modificar o aparelho ou depender de um computador ligado.</p>
+        <p data-i18n="alexaDescription">Integração da Alexa com a OpenAI em Python, executada na AWS Lambda. O assistente consulta a web antes de responder e mantém o contexto durante a sessão.</p>
         <div class="card-tags"><span>Python</span><span>AWS Lambda</span><span>OpenAI API</span><span>Alexa Skills Kit</span><span>Pytest</span></div>
       </article>
-
       <article class="card" data-track="dev">
-        <div class="card-top">
-          <span class="pill pill-dev">DEV · Full‑stack · Em produção</span>
-          <a class="card-link" href="https://app.so-mais-um.com" target="_blank" rel="noopener">app.so-mais-um.com ↗</a>
-        </div>
+        <div class="card-top"><span class="pill pill-dev" data-i18n="soMaisUmPill">DEV · Full-stack · Em produção</span><a class="card-link" href="https://app.so-mais-um.com" target="_blank" rel="noopener">app.so-mais-um.com ↗</a></div>
         <h3>Só+1</h3>
-        <p>SaaS de organização de futebol amador em produção. Atuo na API (estoque, assinaturas via Stripe,
-           LGPD) e no front-end (áreas de Jogador e dashboards de Admin/Owner, com notificações em tempo
-           real via SSE).</p>
+        <p data-i18n="soMaisUmDescription">SaaS de organização de futebol amador em produção. Atuo na API (estoque, assinaturas via Stripe, LGPD) e no front-end (áreas de Jogador e dashboards de Admin/Owner, com notificações em tempo real via SSE).</p>
         <div class="card-tags"><span>React 19</span><span>TypeScript</span><span>Node.js</span><span>Express 5</span><span>Prisma</span><span>PostgreSQL</span></div>
       </article>
-
       <article class="card" data-track="dev">
-        <div class="card-top">
-          <span class="pill pill-dev">DEV · Full‑stack</span>
-          <a class="card-link" href="https://github.com/gxbreus/fazenda-valenza" target="_blank" rel="noopener">repositório ↗</a>
-        </div>
+        <div class="card-top"><span class="pill pill-dev">DEV · Full-stack</span><a class="card-link" href="https://github.com/gxbreus/fazenda-valenza" target="_blank" rel="noopener" data-i18n="repositoryLink">repositório ↗</a></div>
         <h3>Fazenda Valenza</h3>
-        <p>Sistema próprio de gestão de talhões e rastreabilidade de lotes de café, com consulta pública
-           por QR Code.</p>
+        <p data-i18n="valenzaDescription">Sistema próprio de gestão de talhões e rastreabilidade de lotes de café, com consulta pública por QR Code.</p>
         <div class="card-tags"><span>Python</span><span>Streamlit</span><span>PostgreSQL</span></div>
       </article>
-
       <article class="card" data-track="dev">
-        <div class="card-top">
-          <span class="pill pill-dev">DEV · Full‑stack</span>
-          <a class="card-link" href="https://github.com/gxbreus/campus-task-sync" target="_blank" rel="noopener">repositório ↗</a>
-        </div>
+        <div class="card-top"><span class="pill pill-dev">DEV · Full-stack</span><a class="card-link" href="https://github.com/gxbreus/campus-task-sync" target="_blank" rel="noopener" data-i18n="repositoryLink">repositório ↗</a></div>
         <h3>Campus Task Sync</h3>
-        <p>Sincroniza pendências do calendário acadêmico com o Notion, integrando Moodle e Google Drive.</p>
+        <p data-i18n="campusDescription">Sincroniza pendências do calendário acadêmico com o Notion, integrando Moodle e Google Drive.</p>
         <div class="card-tags"><span>TypeScript</span><span>Next.js</span><span>Supabase</span></div>
       </article>
-
       <article class="card" data-track="ux">
-        <div class="card-top">
-          <span class="pill pill-ux">UX/UI · Liderança</span>
-        </div>
-        <h3>Redesign da Plataforma de Redação Inteligente</h3>
-        <p>UX/UI Designer e Coordenador de Design — redesenho de fluxos de uma EdTech de correção de
-           redações, com handoff completo para dev.</p>
-        <div class="card-tags"><span>Figma</span><span>EdTech</span><span>Coordenação</span></div>
+        <div class="card-top"><span class="pill pill-ux" data-i18n="leadershipPill">UX/UI · Liderança</span></div>
+        <h3 data-i18n="essayProjectTitle">Redesign da Plataforma de Redação Inteligente</h3>
+        <p data-i18n="essayProjectDescription">UX/UI Designer e Coordenador de Design — redesenho de fluxos de uma EdTech de correção de redações, com handoff completo para desenvolvimento.</p>
+        <div class="card-tags"><span>Figma</span><span>EdTech</span><span data-i18n="leadershipTag">Coordenação</span></div>
       </article>
-
       <article class="card" data-track="ux">
-        <div class="card-top">
-          <span class="pill pill-ux">UX/UI</span>
-        </div>
+        <div class="card-top"><span class="pill pill-ux">UX/UI</span></div>
         <h3>NEMASA</h3>
-        <p>Design de um sistema de monitoramento da qualidade da água na UFLA, traduzindo requisitos
-           científicos em uma solução intuitiva.</p>
-        <div class="card-tags"><span>Figma</span><span>Pesquisa de usuário</span></div>
+        <p data-i18n="nemasaDescription">Design de um sistema de monitoramento da qualidade da água na UFLA, traduzindo requisitos científicos em uma solução intuitiva.</p>
+        <div class="card-tags"><span>Figma</span><span data-i18n="userResearch">Pesquisa de usuário</span></div>
       </article>
-
     </div>
   </section>
 
-  <section id="contato" class="section reveal contact">
-    <div class="section-head">
-      <span class="section-num">04</span>
-      <h2>Contato</h2>
-    </div>
-    <div class="contact-card">
-      <p>Aberto a estágio em Engenharia de Software e Produto &amp; Design.</p>
-      <div class="contact-links">
-        <a class="btn btn-primary" href="mailto:scs.gabriel1@gmail.com">scs.gabriel1@gmail.com</a>
-        <a class="btn btn-ghost" href="https://linkedin.com/in/gabreus" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn btn-ghost" href="https://github.com/gxbreus" target="_blank" rel="noopener">GitHub</a>
+  <section id="experiencia" class="section reveal">
+    <div class="section-head"><span class="section-num">02</span><h2 data-i18n="experienceTitle">Experiência</h2></div>
+    <ol class="timeline">
+      <li class="timeline-item">
+        <div class="timeline-date" data-i18n="gedaiDate">jul/2025 — atual</div>
+        <div class="timeline-body"><h3 data-i18n="gedaiRole">UI/UX Designer (Bolsista)</h3><p class="timeline-org" data-i18n="gedaiOrg">FUNDECC / Laboratório GEDAI</p><p data-i18n="gedaiDescription">Design e desenvolvimento front-end do SIDAGRO (IMA) — do Figma ao React, em colaboração direta com a equipe.</p></div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-date" data-i18n="emakersDate">jan/2025 — abr/2026</div>
+        <div class="timeline-body"><h3 data-i18n="emakersRole">Designer &amp; Gerente de Marketing</h3><p class="timeline-org">Emakers Júnior</p><p data-i18n="emakersDescription">Marketing, gestão de pessoas e design das entregas. Liderei o design de uma plataforma de e-commerce para cliente real.</p></div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="sobre" class="section reveal">
+    <div class="section-head"><span class="section-num">03</span><h2 data-i18n="aboutTitle">Sobre</h2></div>
+    <div class="about-grid">
+      <div>
+        <p class="about-text" data-i18n-html="aboutOne">No <strong>SIDAGRO</strong>, sistema governamental do Instituto Mineiro de Agropecuária, desenho a interface no Figma e a implemento em React — atuando como UX/UI Designer e desenvolvedor front-end no mesmo projeto. No <strong>Só+1</strong>, SaaS de organização de futebol amador em produção, contribuo na API e no front-end.</p>
+        <p class="about-text" data-i18n-html="aboutTwo">Já liderei o design de sistemas para a UFLA (NEMASA) e coordenei o redesign de uma plataforma EdTech. Também criei o <strong>Alexa AI Bridge</strong>, conectando a Alexa à OpenAI com Python e AWS Lambda.</p>
+      </div>
+      <div class="about-stack">
+        <h3 data-i18n="toolsTitle">Ferramentas do dia a dia</h3>
+        <ul class="stack-list">
+          <li><span>Front-end</span><em>React · TypeScript · Vite · MUI</em></li>
+          <li><span>Back-end</span><em>Node.js · Express · Prisma · PostgreSQL</em></li>
+          <li><span data-i18n="aiCloud">IA e cloud</span><em>Python · OpenAI API · AWS Lambda</em></li>
+          <li><span>Design</span><em>Figma · Design Systems · WCAG</em></li>
+          <li><span data-i18n="process">Processo</span><em>Git · Scrum · <span data-i18n="automatedTests">Testes automatizados</span></em></li>
+        </ul>
       </div>
     </div>
   </section>
 
+  <section id="contato" class="section reveal contact">
+    <div class="section-head"><span class="section-num">04</span><h2 data-i18n="contactTitle">Contato</h2></div>
+    <div class="contact-card">
+      <p data-i18n="availability">Aberto a estágio em Engenharia de Software e Produto &amp; Design.</p>
+      <div class="contact-links">
+        <a class="btn btn-primary" href="mailto:scs.gabriel1@gmail.com">scs.gabriel1@gmail.com</a>
+        <a class="btn btn-ghost" href="https://linkedin.com/in/gabreus" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/gxbreus" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="curriculo-gabriel-soares.pdf" target="_blank" rel="noopener" data-i18n="resumeLink">Currículo PDF</a>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer class="site-footer">
-  <span>Gabriel Soares · Lavras, MG</span>
-  <span>Feito com HTML, CSS e cuidado — hospedado no GitHub Pages.</span>
-</footer>
-
+<footer class="site-footer"><span data-i18n="footerLocation">Gabriel Soares · Lavras, MG</span><span data-i18n="footerMade">Feito com HTML, CSS e cuidado — hospedado no GitHub Pages.</span></footer>
+<p class="sr-only" id="languageStatus" role="status" aria-live="polite"></p>
 <script src="script.js"></script>
 </body>
 </html>
