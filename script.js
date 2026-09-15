@@ -16,7 +16,7 @@
       sidagroIntro: "Sistema governamental de defesa agropecuária do Instituto Mineiro de Agropecuária (IMA). Atuo nos dois lados: desenvolvo o front-end e desenho a interface como UX/UI Designer.",
       sidagroDev: "Componentes reutilizáveis e consumo de APIs REST nos módulos de vacinação, arrecadação, produtos e propriedades.",
       sidagroUx: "Prototipação, identidade visual e estruturação de fluxo de navegação no Figma.", prototyping: "Prototipagem",
-      alexaPill: "DEV · IA e Serverless", repositoryLink: "repositório ↗",
+      alexaPill: "DEV · IA e Serverless", repositoryLink: "repositório ↗", caseStudyLink: "estudo de caso →",
       alexaDescription: "Integração da Alexa com a OpenAI em Python, executada na AWS Lambda. O assistente consulta a web antes de responder e mantém o contexto durante a sessão.",
       soMaisUmPill: "DEV · Full-stack · Em produção",
       soMaisUmDescription: "SaaS de organização de futebol amador em produção. Atuo na API (estoque, assinaturas via Stripe, LGPD) e no front-end (áreas de Jogador e dashboards de Admin/Owner, com notificações em tempo real via SSE).",
@@ -47,7 +47,7 @@
       sidagroIntro: "A government animal and plant health system for Instituto Mineiro de Agropecuária (IMA). I contribute on both sides: developing the front-end and designing the interface as a UX/UI Designer.",
       sidagroDev: "Reusable components and REST API integration across vaccination, revenue, product, and property modules.",
       sidagroUx: "Prototyping, visual identity, and navigation flow design in Figma.", prototyping: "Prototyping",
-      alexaPill: "DEV · AI & Serverless", repositoryLink: "repository ↗",
+      alexaPill: "DEV · AI & Serverless", repositoryLink: "repository ↗", caseStudyLink: "case study →",
       alexaDescription: "An Alexa integration with OpenAI built in Python and deployed on AWS Lambda. The assistant searches the web before answering and keeps conversational context throughout the session.",
       soMaisUmPill: "DEV · Full-stack · Live product",
       soMaisUmDescription: "A live SaaS platform for organizing amateur football. I contribute to the API (inventory, Stripe subscriptions, and GDPR/LGPD) and the front-end (Player areas, Admin/Owner dashboards, and real-time SSE notifications).",
@@ -95,6 +95,10 @@
     });
     document.querySelectorAll("[data-resume-link]").forEach(function(link){
       link.setAttribute("href", selectedLanguage === "en" ? "resume-gabriel-soares.pdf" : "curriculo-gabriel-soares.pdf");
+    });
+    document.querySelectorAll("[data-case-link]").forEach(function(link){
+      var target = link.getAttribute("data-case-link");
+      link.setAttribute("href", "case-studies.html" + (selectedLanguage === "en" ? "?lang=en" : "") + "#" + target);
     });
     try{
       localStorage.setItem("language", selectedLanguage);
