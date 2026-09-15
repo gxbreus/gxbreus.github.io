@@ -3,13 +3,13 @@
 
   var translations = {
     "pt-BR": {
-      title: "Gabriel Soares — UX/UI Designer & Desenvolvedor Front-end",
-      description: "Gabriel Soares — UX/UI Designer e desenvolvedor front-end, estudante de Sistemas de Informação. Design de produto e desenvolvimento de interfaces para sistemas reais.",
+      title: "Gabriel Soares — Desenvolvedor Full-Stack & UX/UI Designer",
+      description: "Gabriel Soares — Desenvolvedor Full-Stack e UX/UI Designer, estudante de Sistemas de Informação. Desenvolvimento de produtos e design de interfaces para sistemas reais.",
       skipLink: "Pular para o conteúdo", brandLabel: "Gabriel Soares — início", navLabel: "Navegação principal",
       navProjects: "Projetos", navExperience: "Experiência", navAbout: "Sobre", navContact: "Contato",
       languageLabel: "Selecionar idioma", themeLabel: "Alternar tema claro/escuro", resumeLink: "Currículo PDF",
-      heroKicker: "UX/UI Designer · Desenvolvedor Front-end",
-      heroTitle: "Desenho a experiência<br><span class=\"hero-emphasis\">e construo a interface</span>.",
+      heroKicker: "Desenvolvedor Full-Stack · UX/UI Designer",
+      heroTitle: "Escrevo o código<br><span class=\"hero-emphasis\">e desenho a interface</span>.",
       heroLead: "Sou o Gabriel — estudante de Sistemas de Informação na UFLA. No <strong>SIDAGRO</strong>, sistema governamental de defesa agropecuária do IMA, desenho e implemento interfaces. Também desenvolvo o <strong>Só+1</strong>, um SaaS em produção, no front-end e no back-end.",
       viewProjects: "Ver projetos", contactMe: "Falar comigo", location: "Lavras, MG — Brasil",
       projectsTitle: "Projetos selecionados", filterLabel: "Filtrar projetos", filterAll: "Todos", mainProject: "Projeto principal",
@@ -34,13 +34,13 @@
       languageStatus: "Idioma alterado para português do Brasil."
     },
     en: {
-      title: "Gabriel Soares — UX/UI Designer & Front-end Developer",
-      description: "Gabriel Soares — UX/UI Designer and front-end developer studying Information Systems. Product design and interface development for real-world systems.",
+      title: "Gabriel Soares — Full-Stack Developer & UX/UI Designer",
+      description: "Gabriel Soares — Full-Stack Developer and UX/UI Designer studying Information Systems. Product development and interface design for real-world systems.",
       skipLink: "Skip to content", brandLabel: "Gabriel Soares — home", navLabel: "Main navigation",
       navProjects: "Projects", navExperience: "Experience", navAbout: "About", navContact: "Contact",
-      languageLabel: "Select language", themeLabel: "Switch light/dark theme", resumeLink: "Resume PDF (PT-BR)",
-      heroKicker: "UX/UI Designer · Front-end Developer",
-      heroTitle: "I design the experience<br><span class=\"hero-emphasis\">and build the interface</span>.",
+      languageLabel: "Select language", themeLabel: "Switch light/dark theme", resumeLink: "Resume PDF",
+      heroKicker: "Full-Stack Developer · UX/UI Designer",
+      heroTitle: "I write the code<br><span class=\"hero-emphasis\">and design the interface</span>.",
       heroLead: "I'm Gabriel, an Information Systems student at UFLA. At <strong>SIDAGRO</strong>, a government animal and plant health system for IMA, I design and implement interfaces. I also work on <strong>Só+1</strong>, a live SaaS product, across both front-end and back-end.",
       viewProjects: "View projects", contactMe: "Get in touch", location: "Lavras, MG — Brazil",
       projectsTitle: "Selected projects", filterLabel: "Filter projects", filterAll: "All", mainProject: "Featured project",
@@ -92,6 +92,9 @@
       var active = button.getAttribute("data-language-option") === selectedLanguage;
       button.classList.toggle("is-active", active);
       button.setAttribute("aria-pressed", String(active));
+    });
+    document.querySelectorAll("[data-resume-link]").forEach(function(link){
+      link.setAttribute("href", selectedLanguage === "en" ? "resume-gabriel-soares.pdf" : "curriculo-gabriel-soares.pdf");
     });
     try{
       localStorage.setItem("language", selectedLanguage);
