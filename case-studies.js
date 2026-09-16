@@ -1,8 +1,8 @@
 (function(){
   "use strict";
   var copy={
-    "pt-BR":{title:"Estudos de caso — Gabriel Soares",description:"Estudos de caso de produto, engenharia full-stack e UX/UI de Gabriel Soares.",home:"Voltar ao portfólio",resume:"Currículo PDF",language:"Selecionar idioma",theme:"Alternar tema claro/escuro",status:"Idioma alterado para português do Brasil."},
-    en:{title:"Case studies — Gabriel Soares",description:"Product, full-stack engineering, and UX/UI case studies by Gabriel Soares.",home:"Back to portfolio",resume:"Resume PDF",language:"Select language",theme:"Switch light/dark theme",status:"Language changed to English."}
+    "pt-BR":{title:"Estudos de caso | Gabriel Soares",description:"Como Gabriel Soares trabalhou em três projetos de desenvolvimento full-stack e UX/UI.",home:"Voltar ao portfólio",resume:"Currículo PDF",language:"Selecionar idioma",theme:"Alternar tema claro/escuro",status:"Idioma alterado para português do Brasil."},
+    en:{title:"Case studies | Gabriel Soares",description:"How Gabriel Soares worked on three full-stack development and UX/UI projects.",home:"Back to portfolio",resume:"Resume PDF",language:"Select language",theme:"Switch light/dark theme",status:"Language changed to English."}
   };
   function applyLanguage(language,announce){
     var selected=language==="en"?"en":"pt-BR";
