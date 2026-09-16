@@ -22,6 +22,7 @@
 .case-copy ul{padding-left:20px;margin:0}
 .case-copy li+li{margin-top:8px}
 .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:42px 0 0;padding:0;list-style:none}
+.facts-two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:680px}
 .facts li{padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
 .facts strong{display:block;font:700 clamp(1.6rem,4vw,2.5rem)/1 "Archivo",sans-serif;color:var(--ink);margin-bottom:7px}
 .facts span{color:var(--ink-soft);font-size:.86rem}
@@ -33,5 +34,5 @@
 .case-footer{padding:48px 0 70px;display:flex;justify-content:space-between;gap:24px;color:var(--ink-soft)}
 [data-lang-block][hidden]{display:none!important}
 @media(max-width:760px){
-  .case-heading,.case-grid{grid-template-columns:1fr}.case-heading{align-items:start}.facts{grid-template-columns:1fr}.architecture{grid-template-columns:1fr}.architecture span{transform:rotate(90deg)}.case-footer{flex-direction:column}.case-hero,.case-study,.case-footer{width:min(calc(100% - 32px),1040px)}
+  .case-heading,.case-grid{grid-template-columns:1fr}.case-heading{align-items:start}.facts,.facts-two{grid-template-columns:1fr}.architecture{grid-template-columns:1fr}.architecture span{transform:rotate(90deg)}.case-footer{flex-direction:column}.case-hero,.case-study,.case-footer{width:min(calc(100% - 32px),1040px)}
 }
