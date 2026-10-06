@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Currículo - Gabriel Soares - Desenvolvimento de Software e Produto</title>
+<style>
+@page { size: A4; margin: 13mm 14mm; }
+* { box-sizing: border-box; font-variant-ligatures: none; }
+body { margin: 0; color: #202820; font: 9pt/1.3 Arial, sans-serif; }
+h1 { font-size: 24pt; margin: 0 0 2mm; }
+h2 { font-size: 10pt; letter-spacing: 1px; text-transform: uppercase; color: #394b3e; border-bottom: 1px solid #ccd4ca; padding-bottom: 1mm; margin: 3mm 0 1.5mm; }
+h3 { font-size: 10pt; margin: 1mm 0; }
+p { margin: 1mm 0; }
+a { color: inherit; text-decoration: none; }
+header { border-bottom: 2px solid #394b3e; padding-bottom: 3mm; }
+.role { font-weight: bold; font-size: 11pt; color: #394b3e; }
+.contact { font-size: 9pt; margin-top: 2mm; }
+.row { display: flex; justify-content: space-between; gap: 4mm; align-items: baseline; }
+.date, .link { font-size: 8.5pt; color: #4c5a50; white-space: nowrap; }
+ul { padding-left: 4mm; margin: 1mm 0 2mm; }
+li { margin: .6mm 0; }
+.project, .experience { break-inside: avoid; border-bottom: 1px solid #e2e6e0; padding: 1.5mm 0; }
+.label { display: inline-block; font-size: 8pt; letter-spacing: .5px; background: #e6ebe4; color: #394b3e; padding: .5mm 1.5mm; }
+.tags { font-size: 8pt; color: #394b3e; margin-top: 1.5mm; }
+.tags span { display: inline-block; background: #edf0e9; padding: .5mm 1.5mm; margin: 0 1mm 1mm 0; }
+.page-two { break-before: page; }
+.columns { display: grid; grid-template-columns: 1fr 1.35fr .65fr; gap: 6mm; margin-top: 5mm; }
+.columns h2 { margin-top: 0; text-transform: none; letter-spacing: 0; font-size: 12pt; }
+.columns h3 { margin-top: 4mm; }
+</style>
+</head>
+<body>
+<header>
+<h1>Gabriel Soares</h1>
+<p class="role">Desenvolvedor de Software · Produto Digital · Estudante de Sistemas de Informação</p>
+<p class="contact">Lavras, MG - Brasil · <a href="mailto:scs.gabriel1@gmail.com">scs.gabriel1@gmail.com</a> · +55 (31) 98890-7226<br><a href="https://github.com/gxbreus">github.com/gxbreus</a> · <a href="https://linkedin.com/in/gabreus">linkedin.com/in/gabreus</a> · <a href="https://gxbreus.github.io/">Portfólio: gxbreus.github.io</a></p>
+</header>
+
+<h2>Resumo</h2>
+<p>Desenvolvedor full-stack e estudante de Sistemas de Informação na UFLA, com atuação entre engenharia de software e produto digital. No SIDAGRO, transformo requisitos e fluxos em protótipos no Figma e interfaces em React e TypeScript. No Só+1, produto SaaS em produção, contribuo no front-end e na API. Tenho experiência com construção de funcionalidades, integrações, testes automatizados, acessibilidade e colaboração direta com equipes de produto.</p>
+
+<h2>Experiência profissional</h2>
+<div class="experience">
+<div class="row"><h3>Desenvolvedor Front-end &amp; UX/UI Designer (Bolsista)</h3><span class="date">jul/2025 - atual</span></div>
+<p>FUNDECC / Laboratório GEDAI</p>
+<ul>
+<li>Atuo no ciclo de produto do SIDAGRO: organizo fluxos e protótipos no Figma e implemento componentes reutilizáveis em React, integrando APIs REST dos módulos de vacinação, arrecadação, produtos e propriedades.</li>
+<li>Implementei o site institucional do GEDAI em React e TypeScript, com 27 rotas navegáveis entre páginas públicas, área interna e interfaces administrativas.</li>
+<li>Avalio interfaces sob princípios de acessibilidade WCAG e trabalho diretamente com a equipe na evolução dos fluxos.</li>
+</ul>
+</div>
+<div class="experience">
+<div class="row"><h3>Designer &amp; Gerente de Marketing</h3><span class="date">jan/2025 - abr/2026</span></div>
+<p>Emakers Júnior</p>
+<ul>
+<li>Liderei o design de uma plataforma de e-commerce para cliente real, estruturando fluxos, protótipos e handoff para desenvolvimento.</li>
+<li>Atuei em marketing, documentação, gestão de pessoas e organização das entregas da empresa júnior.</li>
+</ul>
+</div>
+
+<h2>Projetos selecionados</h2>
+<article class="project">
+<span class="label">PRODUTO · FULL-STACK · EM PRODUÇÃO</span>
+<div class="row"><h3>Só+1</h3><a class="link" href="https://app.so-mais-um.com">app.so-mais-um.com</a></div>
+<ul>
+<li>Desenvolvo funcionalidades no front-end e na API de um SaaS para organização de futebol amador, cobrindo as áreas de Jogador, Admin e Owner.</li>
+<li>Minhas entregas incluem estoque, assinaturas via Stripe, exportação e anonimização de dados para LGPD e notificações em tempo real via SSE.</li>
+</ul>
+<div class="tags"><span>React 19</span><span>TypeScript</span><span>Node.js</span><span>Express 5</span><span>Prisma</span><span>PostgreSQL</span></div>
+</article>
+<article class="project">
+<span class="label">PRODUTO · FULL-STACK</span>
+<div class="row"><h3>Fazenda Valenza</h3><a class="link" href="https://fazendavalenza.com.br">fazendavalenza.com.br</a></div>
+<ul>
+<li>Desenvolvi uma aplicação para gestão de talhões, atividades e lotes de café, com front-end em React/TypeScript, API FastAPI e rastreabilidade pública por QR Code.</li>
+<li>Validei 37 testes automatizados de API e 36 jornadas de interface em desktop e mobile, incluindo fluxos operacionais e administrativos.</li>
+</ul>
+<div class="tags"><span>React</span><span>TypeScript</span><span>FastAPI</span><span>PostgreSQL</span><span>Playwright</span></div>
+</article>
+
+<section class="page-two">
+<h2>Projetos selecionados - continuação</h2>
+<article class="project">
+<span class="label">DEV · IA E SERVERLESS</span>
+<h3>Alexa AI Bridge</h3>
+<p class="link"><a href="https://github.com/gxbreus/alexa-ai-bridge">github.com/gxbreus/alexa-ai-bridge</a></p>
+<ul>
+<li>Desenvolvi uma integração da Alexa com a OpenAI em Python e AWS Lambda, com busca web, contexto de conversa durante a sessão, tratamento de erros e limites de tempo.</li>
+<li>Implementei testes automatizados e CI com GitHub Actions para validar o comportamento da skill.</li>
+</ul>
+<div class="tags"><span>Python</span><span>AWS Lambda</span><span>OpenAI API</span><span>Alexa Skills Kit</span><span>Pytest</span><span>GitHub Actions</span></div>
+</article>
+<article class="project">
+<span class="label">PRODUTO · UX/UI · LIDERANÇA</span>
+<div class="row"><h3>Redação Inteligente</h3><a class="link" href="https://www.redacaointeligente.com.br/">redacaointeligente.com.br</a></div>
+<ul><li>Como UX/UI Designer e Coordenador de Design, organizei o redesenho dos principais fluxos de uma EdTech de correção de redações e preparei o handoff para desenvolvimento.</li></ul>
+<div class="tags"><span>Figma</span><span>Fluxos</span><span>Prototipagem</span><span>Handoff</span><span>Coordenação</span></div>
+</article>
+<article class="project">
+<span class="label">DEV · AUTOMAÇÃO</span>
+<h3>Campus Task Sync</h3>
+<p class="link"><a href="https://github.com/gxbreus/campus-task-sync">github.com/gxbreus/campus-task-sync</a></p>
+<ul><li>Criei uma automação que sincroniza pendências do calendário acadêmico com o Notion, reunindo dados do Moodle e do Google Drive.</li></ul>
+<div class="tags"><span>TypeScript</span><span>Next.js</span><span>Supabase</span><span>Integrações</span></div>
+</article>
+
+<div class="columns">
+<div>
+<h2>Educação</h2>
+<p><strong>Bacharelado em Sistemas de Informação</strong><br>UFLA · 2024 - em andamento<br>Previsão de conclusão: 2028</p>
+<h3>Cursos</h3>
+<ul><li>Figma - UX/UI (Udemy)</li><li>Web Development Bootcamp (Udemy)</li><li>Acessibilidade Digital (Todos na Web)</li><li>Prompting Responsável (Santander Open Academy)</li></ul>
+</div>
+<div>
+<h2>Competências</h2>
+<p><strong>Engenharia:</strong> TypeScript · React · Node.js · Express · Prisma · PostgreSQL · Python · FastAPI</p>
+<p><strong>Produto:</strong> Requisitos · Fluxos · Prototipagem · Design Systems · Handoff · WCAG</p>
+<p><strong>Qualidade:</strong> Git · Playwright · Pytest · Testes automatizados · Scrum</p>
+<p><strong>Integrações:</strong> REST APIs · AWS Lambda · OpenAI API · Stripe · SSE</p>
+</div>
+<div>
+<h2>Idiomas</h2>
+<p>Português - Nativo</p><p>Inglês - Avançado</p><p>Italiano - Básico</p>
+</div>
+</div>
+</section>
+</body>
+</html>
